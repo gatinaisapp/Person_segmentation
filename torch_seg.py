@@ -124,7 +124,7 @@ def segment_color(net, path, gtpath, resize_val=220, dev='cpu', show_im=True, bl
     plt.axis('off')
     if show_im:
         plt.show()
-    # plt.savefig('./SquareMind__MLCV_Challenge_01/predictions/pred'+str(resize_val)+str(save)+str(blob_selection)+'.jpg')
+    # plt.savefig('./predictions/pred'+str(resize_val)+str(save)+str(blob_selection)+'.jpg')
 
     metrics = metric(seg, inpmask)
     print('color metrics', metrics)
@@ -165,11 +165,11 @@ def merge_depth( path, gtpath, color_seg, resize_val=220, dev='cpu', show_im=Tru
 
     ## Camera calibration
     k_rgb = np.load(
-        './SquareMind__MLCV_Challenge_01/calibration/K_color_intrinsic.npy').astype(np.float32)
+        './calibration/K_color_intrinsic.npy').astype(np.float32)
     kdepth = np.load(
-        './SquareMind__MLCV_Challenge_01/calibration/K_depth_intrinsic.npy').astype(np.float32)
+        './calibration/K_depth_intrinsic.npy').astype(np.float32)
     Rt = np.load(
-        './SquareMind__MLCV_Challenge_01/calibration/T_color_to_depth_extrinsic.npy').astype(np.float64)
+        './calibration/T_color_to_depth_extrinsic.npy').astype(np.float64)
     newrt = np.zeros((4, 4)).astype(np.float32)
     newrt[:3, :] = Rt
     newrt[3, :] = (0., 0., 0., 1.)
