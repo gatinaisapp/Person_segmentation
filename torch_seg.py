@@ -17,11 +17,11 @@ import skimage
 from skimage.morphology import watershed
 from skimage.feature import peak_local_max
 
-impath = './SquareMind__MLCV_Challenge_01/images/color_image.jpg'
-bonuspath = './SquareMind__MLCV_Challenge_01/images/color_image_bonus.jpg'
-maskpath = './SquareMind__MLCV_Challenge_01/images/depth_image_mask.png'
-imdepth = './SquareMind__MLCV_Challenge_01/images/depth_image.png'
-imdepthc = './SquareMind__MLCV_Challenge_01/images/depth_image_colored.jpg'
+impath = './images/color_image.jpg'
+bonuspath = './images/color_image_bonus.jpg'
+maskpath = './images/depth_image_mask.png'
+imdepth = './images/depth_image.png'
+imdepthc = './images/depth_image_colored.jpg'
 
 
 def select_blob(seg):
